@@ -1,33 +1,148 @@
-body {
+body { 
     background-color: rgb(198, 198, 235);
 }
-h1{
-text-align: center;
+
+h1 {
+    text-align: center;
 }
+
+/* Solo la primera letra del primer <p> que sigue a cada <h2> */
+h2 + p::first-letter {
+    font-size: 4em;
+    font-family: "Old English Text MT", "Goudy Old Style", serif;
+    float: left;
+    line-height: 0.5;
+    margin-right: 8px;
+    color: red; /* Letra roja */
+    text-transform: uppercase; /* En mayúscula */
+}
+
+/* Primera línea de todos los párrafos */
 p::first-line {
-font-weight: bold;
+    font-weight: bold;
 }
-p::first-letter {
-font-size: 4em; font-family: "Old English Text MT", "Goudy Old Style", serif; float: left; line-height: 0.5;
-margin-right: 8px;
-color:darkred;
+
+/* Selección de texto */
+::selection {
+    background: yellow;
+    color: red;
 }
-:: selection {
-background: yellow;
-color: red;
-}
+
 .servicios {
-text-align: center;
-font-size: 24px;
-font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
-/* Flecha antes del título */
+
+/* Flechas decorativas */
 .servicios::before {
-content: "---> ";
-color: blue;
+    content: "---> ";
+    color: blue;
 }
-/* Flecha después del título */
 .servicios::after {
-content: " <---";
-color: green;
+    content: " <---";
+    color: green;
+}
+/* Estilo para los enlaces */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(40, 207, 222);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(231, 104, 8);
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* Estilo para la barra de navegación */
+/* === Estilos generales === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  margin: 0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Título principal */
+h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* === Lista de enlaces (menú principal) === */
+ul {
+  list-style: none;            /* Quita los puntos de la lista */
+  padding: 0;                  /* Elimina el margen interno */
+  display: flex;               /* Coloca los elementos en línea */
+  flex-wrap: wrap;             /* Permite que los enlaces bajen si no hay espacio */
+  justify-content: center;     /* Centra los enlaces horizontalmente */
+  gap: 20px;                   /* Espacio entre los botones */
+}
+
+/* Cada elemento de la lista */
+ul li {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el efecto al pasar el cursor */
+}
+
+/* Estilos de los enlaces */
+ul li a {
+  display: block;
+  text-decoration: none;       /* Quita el subrayado */
+  background: white;           /* Fondo blanco de los botones */
+  color: #333;                 /* Color del texto */
+  font-weight: 600;            /* Negrita */
+  padding: 15px 25px;          /* Espaciado interno (alto y ancho) */
+  border-radius: 15px;         /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+  transition: all 0.3s ease;   /* Transiciones suaves */
+  border: 2px solid transparent; /* Borde invisible (para efecto hover) */
+}
+
+/* === Efectos al pasar el cursor (hover) === */
+ul li a:hover {
+  background: linear-gradient(135deg, #ff6f61, #ffb347); /* Degradado de color cálido */
+  color: white;                 /* Texto blanco */
+  transform: translateY(-5px) scale(1.05); /* Se levanta y agranda un poco */
+  box-shadow: 0 6px 20px rgba(255,111,97,0.4); /* Sombra más notoria */
+  border-color: white;          /* Borde blanco */
+}
+
+/* === Íconos decorativos antes de cada enlace === */
+ul li:nth-child(1) a::before {
+  content: "🏛️ ";              /* Icono para “Historia de Arequipa” */
+}
+
+ul li:nth-child(2) a::before {
+  content: "📜 ";              /* Icono para “Leyendas” */
+}
+
+ul li:nth-child(3) a::before {
+  content: "🌋 ";              /* Icono para “Zonas Turísticas” */
+}
+
+ul li:nth-child(4) a::before {
+  content: "⭐ ";              /* Icono para “Arequipeños que Hicieron Historia” */
+}
+
+ul li:nth-child(5) a::before {
+  content: "🗓️ ";             /* Icono para “Agenda tus Reservaciones” */
+}
+
+/* === Accesibilidad (cuando se navega con teclado) === */
+ul li a:focus {
+  outline: 3px solid #ffb347;   /* Borde visible al enfocar un enlace */
 }
