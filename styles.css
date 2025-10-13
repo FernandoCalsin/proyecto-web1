@@ -71,16 +71,18 @@ a:active {
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
-  margin: 0;
+  margin: 0;  
   padding: 50px 0;
   text-align: center;
 }
 
 /* Título principal */
 h2 {
+  max-width:900px;
   color: #2c3e50;
   margin-bottom: 30px;
   font-size: 2rem;
+  flex-basis:60%;
 }
 
 /* === Lista de enlaces (menú principal) === */
@@ -146,3 +148,4 @@ ul li:nth-child(5) a::before {
 ul li a:focus {
   outline: 3px solid #ffb347;   /* Borde visible al enfocar un enlace */
 }
+
