@@ -9,19 +9,22 @@
 </head>
 <body>
     <header>
-        <h1>Arequipa: La Ciudad Blanca</h1>
+        <a href="index.html">
+            <img class="logo-center" src="imagenes/Logo.png" alt="Logo de la Empresa">
+        </a>
         <nav>
-            <button onclick="abrirMenu()" class="boton-abrir">Suscribete</button>
-            <button onclick="abrirMenu()" class="boton-abrir">Contactanos</button>
-            <button onclick="abrirMenu()" class="boton-abrir">☰ Menú de Destinos</button>           
+            <button onclick="abrirOverlay('overlay-suscribete')" class="boton-abrir">Suscribete</button>
+            <button onclick="abrirOverlay('overlay-contactanos')" class="boton-abrir">Contactanos</button>
+            <button onclick="abrirOverlay('menu-lateral')" class="boton-abrir">☰ Menú de Destinos</button>         
         </nav>
     </header>
+
     <div id="menu-lateral" class="menu-overlay">
         <div class="contenido-menu">
-            <span class="cerrar" onclick="cerrarMenu()">&times;</span>
+            <span class="cerrar" onclick="cerrarOverlay('menu-lateral')">&times;</span>
             <h2>Destinos</h2>
             <div class="contenedor-listas">
-            <ul>
+                <ul>
                 <li><a href="#">Áncash</a></li>
                 <li><a href="#">Apurimac</a></li>
                 <li><a href="#">Arequipa</a></li>
@@ -56,6 +59,32 @@
             </div>
         </div>
     </div>
+
+    <div id="overlay-suscribete" class="menu-overlay">
+        <div class="contenido-menu">
+            <span class="cerrar" onclick="cerrarOverlay('overlay-suscribete')">&times;</span>
+            <h2>Suscríbete</h2>
+            <p>Recibe noticias y ofertas especiales sobre viajes a Arequipa.</p>
+            <form style="margin-top: 30px; color: white; text-align: center;">
+                <input type="email" placeholder="Ingresa tu correo electrónico" style="width: 80%; padding: 10px; font-size: 16px;">
+                <button type="submit" style="padding: 10px 20px; font-size: 16px; margin-top: 10px;">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay-contactanos" class="menu-overlay">
+        <div class="contenido-menu">
+            <span class="cerrar" onclick="cerrarOverlay('overlay-contactanos')">&times;</span>
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna duda? ¡Escríbenos!</p>
+            <form style="margin-top: 30px; color: white; text-align: center;">
+                <input type="text" placeholder="Tu Nombre" style="width: 80%; padding: 10px; font-size: 16px; margin-bottom: 10px;">
+                <textarea placeholder="Tu Mensaje" style="width: 80%; height: 100px; padding: 10px; font-size: 16px;"></textarea>
+                <button type="submit" style="padding: 10px 20px; font-size: 16px; margin-top: 10px;">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
     <aside>
         <h3>Noticias</h3>
         <ul>

@@ -4,11 +4,17 @@ body {
   padding: 0;
 }
 header {
-    margin:0%;
-    padding: 0%;
-    background-color:#2b7a78;
+    background-color: #2b7a78;
+    color: white; /* Para que el texto del h1 sea blanco y visible */
+    padding: 20px; /* Añade espacio interno para que no se pegue a los bordes */
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Pone el h1 a la izquierda y el nav a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
 }
-
+.logo-center {
+    width: 80px;  /* Ajusta el tamaño que quieras */
+    height: auto; /* Mantiene la proporción */
+}
 /* Estilo del botón */
 .boton-abrir {
   background-color: #0077cc;
