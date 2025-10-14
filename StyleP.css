@@ -3,6 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+header {
+    margin:0%;
+    padding: 0%;
+    background-color:#2b7a78;
+}
 
 /* Estilo del botón */
 .boton-abrir {
@@ -14,7 +19,6 @@ body {
   font-size: 18px;
   border-radius: 8px;
 }
-
 /* Fondo del menú (overlay) */
 .menu-overlay {
   position: fixed;
@@ -27,7 +31,6 @@ body {
   transition: width 0.4s;
   z-index: 1000;
 }
-
 /* Contenido del menú */
 .contenido-menu {
   background-color: #2b7a78; /* color de fondo */
@@ -35,7 +38,6 @@ body {
   height: 100%;
   padding: 20px;
 }
-
 /* Botón cerrar */
 .cerrar {
   font-size: 50px;
@@ -45,7 +47,6 @@ body {
   right:50px;
 
 }
-
 /* Enlaces del menú */
 .menu-overlay ul {
   list-style: none;
@@ -61,11 +62,6 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
-
-
-
-
 /* ---- Listas de destinos en columnas ---- */
 .contenedor-listas {
   display: flex;
