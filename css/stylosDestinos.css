@@ -1,0 +1,163 @@
+:root {
+    --color-primary: #003366;
+    --color-secondary: #f0f8ff;
+    --color-text: #fff;
+    --color-chat: #25D366; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+}
+.logo-area {
+    background-color: var(--color-primary);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    min-width: 150px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+.main-nav {
+    background-color: var(--color-secondary);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0 15px;
+    font-weight: 600;
+}
+.main-nav a {
+    color: var(--color-primary);
+    padding: 0 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.main-nav a:hover {
+    color: #c0c0c0;
+
+.lang-area {
+    background-color: var(--color-secondary);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.lang-selector {
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    color: var(--color-text);
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-chat);
+    color: var(--color-text);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 101;
+    transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+    background-color: #1DA851; 
+}
+
+.chat-button i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+@media (max-width: 900px) {   
+    .main-nav {
+        display: none;
+    }   
+    .logo-area {
+        width: 50%;
+    }
+    .lang-area {
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
