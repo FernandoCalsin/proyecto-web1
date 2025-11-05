@@ -1,31 +1,57 @@
+/* Fuente y reset */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+
+/* ---------------- HEADER ---------------- */
 header {
-    background-color: #2b7a78;
-    color: white; /* Para que el texto del h1 sea blanco y visible */
-    padding: 20px; /* Añade espacio interno para que no se pegue a los bordes */
-    display: flex; /* Activa Flexbox */
-    justify-content: space-between; /* Pone el h1 a la izquierda y el nav a la derecha */
-    align-items: center; /* Centra los elementos verticalmente */
+  background-color: #D50000; /* rojo vivo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
 }
+
 .logo-center {
-    width: 80px;  /* Ajusta el tamaño que quieras */
-    height: auto; /* Mantiene la proporción */
+  width: 80px;
+  height: auto;
 }
-/* Estilo del botón */
+
+/* Botones del header (Suscríbete, Contacto, Menú) */
+nav a {
+  background-color: #0277BD; /* azul brillante */
+  color: white;
+  padding: 10px 18px;
+  margin-left: 12px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #015C8B; /* azul más oscuro al pasar mouse */
+}
+
+/* ---------------- MENÚ LATERAL ---------------- */
 .boton-abrir {
-  background-color: #0077cc;
+  background-color: #0277BD;
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 18px;
   border-radius: 8px;
+  transition: 0.3s;
 }
-/* Fondo del menú (overlay) */
+
+.boton-abrir:hover {
+  background-color: #015C8B;
+}
+
+/* Fondo del menú */
 .menu-overlay {
   position: fixed;
   left: 0;
@@ -37,23 +63,22 @@ header {
   transition: width 0.4s;
   z-index: 1000;
 }
-/* Contenido del menú */
+
 .contenido-menu {
-  background-color: #2b7a78; /* color de fondo */
+  background-color: #003049; /* azul elegante */
   width: 100%;
   height: 100%;
   padding: 20px;
 }
-/* Botón cerrar */
+
 .cerrar {
   font-size: 50px;
   cursor: pointer;
-  position:absolute;
-  top:30px;
-  right:50px;
-
+  position: absolute;
+  top: 30px;
+  right: 50px;
 }
-/* Enlaces del menú */
+
 .menu-overlay ul {
   list-style: none;
   padding: 0;
@@ -64,34 +89,62 @@ header {
 }
 
 .menu-overlay ul li a {
-  color: #333;
+  color: #FFD166;
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;
 }
-/* ---- Listas de destinos en columnas ---- */
+
+/* ---------------- LISTA DE DESTINOS ---------------- */
 .contenedor-listas {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  
   padding: 20px;
   border-radius: 12px;
-}
-
-.contenedor-listas ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .contenedor-listas a {
   color: white;
   text-decoration: underline;
   font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 
 .contenedor-listas a:hover {
   color: #ffd700;
+}
+
+/* ---------------- SLIDER DE IMÁGENES ---------------- */
+.hero {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: cambioFondo 30s infinite;
+}
+
+@keyframes cambioFondo {
+  0%   { background-image: url("imagenes/peru 1.jpg"); }
+  16%  { background-image: url("imagenes/peru 2.jpg"); }
+  33%  { background-image: url("imagenes/peru 3.jpg"); }
+  50%  { background-image: url("imagenes/peru 4.jpg"); }
+  66%  { background-image: url("imagenes/peru 5.jpg"); }
+  83%  { background-image: url("imagenes/peru 6.jpg"); }
+  100% { background-image: url("imagenes/peru 1.jpg"); }
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  font-size: 14px;
 }

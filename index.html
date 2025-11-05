@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arequipa</title>
     <link rel="stylesheet" href="StyleP.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,11 +14,14 @@
         </a>
         <nav>
             <button onclick="abrirOverlay('overlay-suscribete')" class="boton-abrir">Suscribete</button>
-            <button onclick="abrirOverlay('overlay-contactanos')" class="boton-abrir">Contactanos</button>
+            <button onclick="abrirOverlay('overlay-login')" class="boton-abrir">Iniciar Sesión</button>
             <button onclick="abrirOverlay('menu-lateral')" class="boton-abrir">☰ Menú de Destinos</button>         
         </nav>
     </header>
+    
+    <section class="hero"></section>
 
+    <!-- MENÚ DESTINOS -->
     <div id="menu-lateral" class="menu-overlay">
         <div class="contenido-menu">
             <span class="cerrar" onclick="cerrarOverlay('menu-lateral')">&times;</span>
@@ -60,46 +63,43 @@
         </div>
     </div>
 
+    <!-- REGISTRO / SUSCRIBETE -->
     <div id="overlay-suscribete" class="menu-overlay">
         <div class="contenido-menu">
             <span class="cerrar" onclick="cerrarOverlay('overlay-suscribete')">&times;</span>
-            <h3>>Ingresar</h2>
+            <h3>Registrarse</h3>
                 <form class="login-form">
                     <div class="input-group">
                         <input type="email" placeholder="Correo Electrónico" required>
                     </div>
-                    <div class="input-group password-group">
+                    <div class="input-group">
                         <input type="password" placeholder="Contraseña" required>
-                        <i class="fas fa-eye toggle-password"></i>
                     </div>
-                    <button type="submit" class="submit-button">Inicia</button>
+                    <button type="submit" class="submit-button">Crear Cuenta</button>
                 </form>
-            </div>
-           
         </div>
     </div>
-        <div id="overlay-contactanos" class="menu-overlay">
+
+    <!-- INICIAR SESIÓN -->
+    <div id="overlay-login" class="menu-overlay">
         <div class="contenido-menu">
-            <span class="cerrar" onclick="cerrarOverlay('overlay-contactanos')">&times;</span>
-            <h3>Contáctanos</h3>
+            <span class="cerrar" onclick="cerrarOverlay('overlay-login')">&times;</span>
+            <h3>Iniciar Sesión</h3>
 
             <form class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Tu Nombre" required>
-                </div>
                 <div class="input-group">
                     <input type="email" placeholder="Correo Electrónico" required>
                 </div>
                 <div class="input-group">
-                    <textarea placeholder="Mensaje" required></textarea>
+                    <input type="password" placeholder="Contraseña" required>
                 </div>
-                <button type="submit" class="submit-button">Enviar</button>
+                <button type="submit" class="submit-button">Entrar</button>
             </form>
         </div>
     </div>
-    <main>
 
-    </main>   
+    <main></main>   
+
     <footer>
         <p>&copy; 2025 Mi Empresa. Todos los derechos reservados.</p>
     </footer>
