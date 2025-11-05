@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let passwordGuardada = localStorage.getItem(email);
 
     if(passwordGuardada === pass) {
-      alert("✅ Sesión iniciada correctamente!");
+      alert("Sesión iniciada correctamente!");
       cerrarOverlay('overlay-contactanos');
     } else {
       alert("Correo o contraseña incorrectos");
