@@ -1,11 +1,20 @@
+/*titutlo*/
+.titulo{
+  color:black;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 100px;
+
+}
 /* Fuente y reset */
 body {
   font-family: Arial, sans-serif;
+  color:#FFD166;
   margin: 0;
   padding: 0;
 }
 
-/* ---------------- HEADER ---------------- */
+/*HEADER */
 header {
   background-color: #D50000; /* rojo vivo */
   display: flex;
@@ -35,7 +44,7 @@ nav a:hover {
   background-color: #015C8B; /* azul más oscuro al pasar mouse */
 }
 
-/* ---------------- MENÚ LATERAL ---------------- */
+/*MENÚ LATERAL*/
 .boton-abrir {
   background-color: #0277BD;
   color: white;
@@ -95,7 +104,7 @@ nav a:hover {
   font-size: 20px;
 }
 
-/* ---------------- LISTA DE DESTINOS ---------------- */
+/* LISTA DE DESTINOS */
 .contenedor-listas {
   display: flex;
   flex-wrap: wrap;
