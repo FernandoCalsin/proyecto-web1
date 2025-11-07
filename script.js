@@ -41,3 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+function comentar(){
+  let comentario=document.getElementById("texto-comentario")
+  document.getElementById("lista-comentarios").textContent =comentario;
+}
+
