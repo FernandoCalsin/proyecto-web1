@@ -125,23 +125,64 @@ nav a:hover {
 }
 
 /* ---------------- SLIDER DE IMÁGENES ---------------- */
+/* ---------------- LISTAS ---------------- */
+.contenedor-listas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contenedor-listas a {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.contenedor-listas a:hover {
+  color: #ffd700;
+}
+
+/* ---------------- SLIDER ---------------- */
 .hero {
   width: 100%;
   height: 50vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: cambioFondo 30s infinite;
+  background-color: #000;
+  animation: cambioFondo 30s infinite ease-in-out;
+  position: relative;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background:
+    url("imagenes/peru1.jpg") no-repeat,
+    url("imagenes/peru2.jpg") no-repeat,
+    url("imagenes/peru3.jpg") no-repeat,
+    url("imagenes/peru4.jpg") no-repeat,
+    url("imagenes/peru5.jpg") no-repeat,
+    url("imagenes/peru6.jpg") no-repeat,
+    url("imagenes/peru10.jpg") no-repeat,
+    url("imagenes/peru11.jpg") no-repeat;
+}
 @keyframes cambioFondo {
-  0%   { background-image: url("imagenes/peru 1.jpg"); }
-  16%  { background-image: url("imagenes/peru 2.jpg"); }
-  33%  { background-image: url("imagenes/peru 3.jpg"); }
-  50%  { background-image: url("imagenes/peru 4.jpg"); }
-  66%  { background-image: url("imagenes/peru 5.jpg"); }
-  83%  { background-image: url("imagenes/peru 6.jpg"); }
-  100% { background-image: url("imagenes/peru 1.jpg"); }
+  0%   { background-image: url("imagenes/peru1.jpg"); }
+  12%  { background-image: url("imagenes/peru2.jpg"); }
+  24%  { background-image: url("imagenes/peru3.jpg"); }
+  36%  { background-image: url("imagenes/peru4.jpg"); }
+  48%  { background-image: url("imagenes/peru5.jpg"); }
+  60%  { background-image: url("imagenes/peru6.jpg"); }
+  72%  { background-image: url("imagenes/peru10.jpg"); }
+  84%  { background-image: url("imagenes/peru11.jpg"); }
+  100% { background-image: url("imagenes/peru1.jpg"); }
 }
 
 /* ---------------- FOOTER ---------------- */
