@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora el Mundo - Turismo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Explora el Mundo</h1>
+            <p>Descubre destinos increíbles y su historia</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>Selecciona una Región</h2>
+                <div class="button-grid" id="regionButtons">
+                    <button class="btn btn-region" data-region="Lima">Lima, Perú</button>
+                    <button class="btn btn-region" data-region="Cusco">Cusco, Perú</button>
+                    <button class="btn btn-region" data-region="Arequipa">Arequipa, Perú</button>
+                    <button class="btn btn-region" data-region="París">París, Francia</button>
+                    <button class="btn btn-region" data-region="Roma">Roma, Italia</button>
+                    <button class="btn btn-region" data-region="Tokyo">Tokyo, Japón</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>¿Qué deseas conocer?</h2>
+                <div class="button-grid" id="infoButtons">
+                    <button class="btn btn-info" data-type="historia" disabled>📜 Historia</button>
+                    <button class="btn btn-info" data-type="sitios" disabled>🏛️ Sitios Importantes</button>
+                    <button class="btn btn-info" data-type="movilidad" disabled>🚌 Movilidad y Transporte</button>
+                </div>
+            </div>
+
+            <div class="info-display" id="infoDisplay"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
