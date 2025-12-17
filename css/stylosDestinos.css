@@ -2,7 +2,8 @@
     --color-primary: #003366;
     --color-secondary: #f0f8ff;
     --color-text: #fff;
-    --color-chat: #25D366; 
+    --color-chat: #25D366;
+}
 
 * {
     margin: 0;
@@ -62,6 +63,7 @@ header {
 }
 .main-nav a:hover {
     color: #c0c0c0;
+}
 
 .lang-area {
     background-color: var(--color-secondary);
