@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Región</title> 
+    <link rel="stylesheet" href="css/stylosDestinos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <!-- Aquí se insertará dinámicamente el nombre de la región -->
+            <a href="#" class="logo" id="titulo"></a>
+        </div>
+        <nav class="main-nav"> 
+            <a href="#info">Información de Ciudad</a>
+            <a href="#">Cosas que Hacer</a>
+            <a href="#">Comida y Bebida</a>
+            <a href="../reservaciones/calendario.html">Dónde alojarse</a>
+            <a href="#">Buses</a>
+            <a href="#">Eventos</a>
+        </nav>
+        
+        <div class="lang-area">
+            <select class="lang-selector">
+                <option value="es">ESP</option>
+                <option value="en">ENG</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 id="titulo2"></h1>
+            <p id="descripcion"></p>
+        </div>
+    </main>
+
+
+    <section id="info" class="info-ciudad">
+        <h2>Información de Ciudad</h2>
+        <div id="contenido-ciudad"></div>
+    </section>
+  
+    <script src="script.js"></script>
+
+</body>
+</html>
