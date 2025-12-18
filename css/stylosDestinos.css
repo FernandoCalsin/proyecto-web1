@@ -82,6 +82,16 @@ header {
     color: var(--color-primary);
     cursor: pointer;
 }
+/* Botón regresar en páginas de destino */
+.back-button {
+    margin-right: 12px;
+    padding: 6px 10px;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+}
 .hero-section {
     position: relative;
     width: 100%;

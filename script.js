@@ -78,10 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const elDescripcion = document.getElementById("descripcion");
 
         if (!info) {
+          // Exponer variable global indicando que no existe la región
+          window.city = 'Región no encontrada';
           if (elTitulo) elTitulo.textContent = "Región no encontrada";
           if (elTitulo2) elTitulo2.textContent = "Región no encontrada";
           return;
         }
+
+        // Exponer nombre legible de la ciudad/región
+        window.city = info.titulo;
 
         document.title = info.titulo;
         if (elTitulo) elTitulo.textContent = info.titulo;
@@ -103,10 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => {
         console.error("Error al cargar regiones.json:", error);
+        // Limpiar variable global city en caso de error
+        window.city = '';
         const elTitulo = document.getElementById("titulo");
+        const elTitulo2 = document.getElementById("titulo2");
         if (elTitulo) elTitulo.textContent = "Error al cargar datos";
+        if (elTitulo2) elTitulo2.textContent = "";
       });
   } else {
+    // No hay parámetro 'region' en la URL
+    window.city = '';
     const elTitulo = document.getElementById("titulo");
     const elTitulo2 = document.getElementById("titulo2");
     if (elTitulo) elTitulo.textContent = "Región no especificada";
