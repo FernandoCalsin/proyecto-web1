@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Visitas Turísticas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      background: white;
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      margin-top: 10px;
+      width: 80%;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Reserva tu visita turística</h2>
+    <p>Selecciona la fecha de tu visita:</p>
+    <input type="date" id="fechaVisita">
+    <br>
+    <button onclick="confirmarVisita()">Confirmar visita</button>
+    <p id="mensaje"></p>
+  </div>
+
+  <script>
+    function confirmarVisita() {
+      const fecha = document.getElementById("fechaVisita").value;
+      const mensaje = document.getElementById("mensaje");
+
+      if (fecha) {
+        mensaje.textContent = "✅ Tu visita fue agendada para el " + fecha;
+      } else {
+        mensaje.textContent = "⚠️ Por favor selecciona una fecha.";
+      }
+    }
+  </script>
+</body>
+</html>
