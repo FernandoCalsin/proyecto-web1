@@ -18,6 +18,7 @@ document.addEventListener("keydown", function (e) {
     });
   }
 });
+
 // Cerrar el overlay si hacen click fuera del contenido
 document.querySelectorAll(".menu-overlay").forEach(overlay => {
   overlay.addEventListener("click", e => {
@@ -34,6 +35,7 @@ document.querySelectorAll(".contenido-menu").forEach(menu => {
 
 // Registro, Login y Regiones dinámicas-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Registro ----------------------------------------------------------------------------------------------------------
   const formRegistro = document.querySelector("#overlay-suscribete form.login-form");
   if (formRegistro) {
     formRegistro.addEventListener("submit", (e) => {
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Login -------------------------------------------------------------------------------------------------------------------------------
+  // --- Login -------------------------------------------------------------------------------------------------------------
   const formLogin = document.querySelector("#overlay-login form.contact-form");
   if (formLogin) {
     formLogin.addEventListener("submit", (e) => {
@@ -78,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  //Regiones dinámicas ---------------------------------------------------------------------------------------
+
+  // --- Regiones dinámicas ------------------------------------------------------------------------------------------------
   const params = new URLSearchParams(window.location.search);
   const region = params.get("region");
 
@@ -125,15 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elTitulo) elTitulo.textContent = "Región no especificada";
     if (elTitulo2) elTitulo2.textContent = "";
   }
-});
-// Comentarios dinámicos---------------------------------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+
+  // --- Comentarios dinámicos ----------------------------------------------------------------------------------------------
   const form = document.getElementById("form-comentarios");
   if (form) {
     form.addEventListener("submit", comentar);
   }
 
-  // Cargar comentarios al iniciar
   const lista = document.getElementById("lista-comentarios");
   fetch("https://proyecto-web1-168d.onrender.com/api/comentarios")
     .then(res => res.json())
@@ -147,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Error al cargar comentarios:", err));
 });
 
+// Función para enviar comentario -------------------------------------------------------------------------------------------
 function comentar(event) {
   event.preventDefault(); // evita que el formulario recargue la página
 
@@ -176,17 +178,3 @@ function comentar(event) {
     alert("Hubo un problema al guardar tu comentario.");
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const lista = document.getElementById("lista-comentarios");
-  fetch("https://proyecto-web1-168d.onrender.com/api/comentarios")
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(c => {
-        const nuevoComentario = document.createElement("p");
-        nuevoComentario.textContent = c.texto;
-        lista.appendChild(nuevoComentario);
-      });
-    })
-    .catch(err => console.error("Error al cargar comentarios:", err));
-});
