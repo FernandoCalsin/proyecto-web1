@@ -1,13 +1,14 @@
 // Abrir y cerrar overlays--------------------------------------------------------------------------------------------------------------
 function abrirOverlay(overlayId) {
   const el = document.getElementById(overlayId);
-  if (el) el.style.width = "100%";
+  if (el) el.classList.add("activo");
 }
 
 function cerrarOverlay(overlayId) {
   const el = document.getElementById(overlayId);
-  if (el) el.style.width = "0";
+  if (el) el.classList.remove("activo");
 }
+
 
 // Registro, Login y Regiones dinámicas-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
