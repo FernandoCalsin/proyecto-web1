@@ -9,6 +9,28 @@ function cerrarOverlay(overlayId) {
   if (el) el.classList.remove("activo");
 }
 
+// Cerrar overlays con la tecla ESC
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    const overlays = document.querySelectorAll(".menu-overlay");
+    overlays.forEach(overlay => {
+      overlay.style.width = "0";
+    });
+  }
+});
+// Cerrar el overlay si hacen click fuera del contenido
+document.querySelectorAll(".menu-overlay").forEach(overlay => {
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) {
+      overlay.style.width = "0";
+    }
+  });
+});
+document.querySelectorAll(".contenido-menu").forEach(menu => {
+  menu.addEventListener("click", e => {
+    e.stopPropagation();
+  });
+});
 
 // Registro, Login y Regiones dinámicas-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
