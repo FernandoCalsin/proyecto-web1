@@ -127,7 +127,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // Comentarios dinámicos---------------------------------------------------------------------------------------------------------------
-function comentar() {
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-comentarios");
+  if (form) {
+    form.addEventListener("submit", comentar);
+  }
+
+  // Cargar comentarios al iniciar
+  const lista = document.getElementById("lista-comentarios");
+  fetch("https://proyecto-web1-168d.onrender.com/api/comentarios")
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(c => {
+        const nuevoComentario = document.createElement("p");
+        nuevoComentario.textContent = c.texto;
+        lista.appendChild(nuevoComentario);
+      });
+    })
+    .catch(err => console.error("Error al cargar comentarios:", err));
+});
+
+function comentar(event) {
+  event.preventDefault(); // evita que el formulario recargue la página
+
   const textarea = document.getElementById("texto-comentario");
   const lista = document.getElementById("lista-comentarios");
   const comentario = textarea?.value.trim();
@@ -136,7 +158,8 @@ function comentar() {
     alert("Por favor escribe un comentario antes de enviar.");
     return;
   }
-  fetch("/api/comentarios", {
+
+  fetch("https://proyecto-web1-168d.onrender.com/api/comentarios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ texto: comentario })
@@ -145,17 +168,18 @@ function comentar() {
   .then(data => {
     const nuevoComentario = document.createElement("p");
     nuevoComentario.textContent = data.texto;
-    if (lista) lista.appendChild(nuevoComentario);
-    if (textarea) textarea.value = "";
+    lista.appendChild(nuevoComentario);
+    textarea.value = "";
   })
   .catch(err => {
     console.error("Error al guardar comentario:", err);
     alert("Hubo un problema al guardar tu comentario.");
   });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const lista = document.getElementById("lista-comentarios");
-  fetch("/api/comentarios")
+  fetch("https://proyecto-web1-168d.onrender.com/api/comentarios")
     .then(res => res.json())
     .then(data => {
       data.forEach(c => {
