@@ -1,6 +1,4 @@
-// ===============================
-// Abrir y cerrar overlays
-// ===============================
+// Abrir y cerrar overlays--------------------------------------------------------------------------------------------------------------
 function abrirOverlay(overlayId) {
   const el = document.getElementById(overlayId);
   if (el) el.style.width = "100%";
@@ -11,11 +9,8 @@ function cerrarOverlay(overlayId) {
   if (el) el.style.width = "0";
 }
 
-// ===============================
-// Registro, Login y Regiones dinámicas
-// ===============================
+// Registro, Login y Regiones dinámicas-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Registro ---
   const formRegistro = document.querySelector("#overlay-suscribete form.login-form");
   if (formRegistro) {
     formRegistro.addEventListener("submit", (e) => {
@@ -38,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Login ---
+  // --- Login -------------------------------------------------------------------------------------------------------------------------------
   const formLogin = document.querySelector("#overlay-login form.contact-form");
   if (formLogin) {
     formLogin.addEventListener("submit", (e) => {
@@ -60,15 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // --- Regiones dinámicas ---
+  //Regiones dinámicas ---------------------------------------------------------------------------------------
   const params = new URLSearchParams(window.location.search);
   const region = params.get("region");
 
   if (region) {
-    // IMPORTANTE: ajusta esta ruta según dónde esté tu archivo:
-    // Si este script está dentro de destinos/infoRegiones/ y regiones.json está en la raíz,
-    // la ruta correcta es "../../regiones.json"
     fetch("regiones.json")
       .then((res) => res.json())
       .then((data) => {
@@ -88,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (elTitulo2) elTitulo2.textContent = info.titulo;
         if (elDescripcion && info.descripcion) elDescripcion.textContent = info.descripcion;
 
-        // Información de ciudad (sección interna)
         const contenedor = document.getElementById("contenido-ciudad");
         if (contenedor && (info.infoCiudad || info.imagen)) {
           contenedor.innerHTML = `
@@ -113,10 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elTitulo2) elTitulo2.textContent = "";
   }
 });
-
-// ===============================
-// Comentarios dinámicos
-// ===============================
+// Comentarios dinámicos---------------------------------------------------------------------------------------------------------------
 function comentar() {
   const textarea = document.getElementById("texto-comentario");
   const lista = document.getElementById("lista-comentarios");
