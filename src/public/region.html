@@ -20,6 +20,8 @@
             <a href="#" id="btnLugares">🗺️ Lugares Turísticos</a>
             <a href="#" id="btnGastronomia">🍽️ Gastronomía</a>
             <a href="#" id="btnHistoria">📜 Historia</a>
+            <a href="#" id="btnReserva">📅 Reservar visita</a>
+        </div>
         </nav>
     </header>
 
@@ -38,5 +40,17 @@
     <footer>
         <p>&copy; 2025 Mi proyecto-UNSA. Todos los derechos reservados.</p>
     </footer>
+    <div id="overlayReserva" class="menu-overlay">
+    <div class="contenido-menu">
+        <h2>Reserva tu visita</h2>
+
+        <input type="date" id="fechaVisita">
+
+        <br><br>
+
+        <button onclick="confirmarReserva()">Confirmar reserva</button>
+        <button onclick="cerrarOverlay('overlayReserva')">Cancelar</button>
+    </div>
+    </div>
 </body>
 </html>

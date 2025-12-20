@@ -353,3 +353,76 @@ footer {
         font-size: 1.8em;
     }
 }
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.menu-overlay.activo {
+  display: flex;
+}
+
+/* Caja del modal */
+.contenido-menu {
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: fadeInScale 0.25s ease;
+}
+
+/* Título */
+.contenido-menu h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Input fecha */
+.contenido-menu input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+
+/* Contenedor botones */
+.contenido-menu button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botón confirmar */
+.contenido-menu button:first-of-type {
+  background: #27ae60;
+  color: white;
+}
+
+.contenido-menu button:first-of-type:hover {
+  background: #219150;
+}
+
+/* Botón cancelar */
+.contenido-menu button:last-of-type {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.contenido-menu button:last-of-type:hover {
+  background: #cfcfcf;
+}

@@ -48,6 +48,8 @@ const btnGastronomia = document.getElementById('btnGastronomia');
 const btnHistoria = document.getElementById('btnHistoria');
 const contentArea = document.getElementById('contentArea');
 const navLinks = document.querySelectorAll('.main-nav a');
+const btnReserva = document.getElementById('btnReserva');
+
 
 // Eventos para los botones
 btnInfoCiudad.addEventListener('click', (e) => {
@@ -78,6 +80,12 @@ btnHistoria.addEventListener('click', (e) => {
     e.preventDefault();
     setActiveLink(btnHistoria);
     fetchHistoria(currentRegion);
+});
+
+btnReserva.addEventListener('click', (e) => {
+  e.preventDefault();
+  setActiveLink(btnReserva);
+  abrirOverlay("overlayReserva");
 });
 
 function setActiveLink(activeElement) {
@@ -304,4 +312,49 @@ function showError(message) {
 window.addEventListener('load', () => {
     fetchCityInfo(currentRegion);
     setActiveLink(btnInfoCiudad);
+});
+function confirmarReserva() {
+  const fecha = document.getElementById("fechaVisita").value;
+
+  if (!fecha) {
+    alert("Selecciona una fecha para la visita");
+    return;
+  }
+
+  alert(`Tu visita a ${currentRegion} fue reservada para el ${fecha}`);
+  cerrarOverlay("overlayReserva");
+}
+
+function abrirOverlay(overlayId) {
+  const el = document.getElementById(overlayId);
+  if (el) el.classList.add("activo");
+}
+
+function cerrarOverlay(overlayId) {
+  const el = document.getElementById(overlayId);
+  if (el) el.classList.remove("activo");
+}
+
+// Cerrar overlays con la tecla ESC
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    const overlays = document.querySelectorAll(".menu-overlay");
+    overlays.forEach(overlay => {
+      overlay.style.width = "0";
+    });
+  }
+});
+
+// Cerrar el overlay si hacen click fuera del contenido
+document.querySelectorAll(".menu-overlay").forEach(overlay => {
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) {
+      overlay.style.width = "0";
+    }
+  });
+});
+document.querySelectorAll(".contenido-menu").forEach(menu => {
+  menu.addEventListener("click", e => {
+    e.stopPropagation();
+  });
 });
