@@ -95,7 +95,7 @@ function setActiveLink(activeElement) {
 
 // Función para información general de la ciudad
 async function fetchCityInfo(region) {
-    contentArea.innerHTML = '<div class="info-panel show"><div class="loading">⏳ Cargando información de la ciudad</div></div>';
+    contentArea.innerHTML = '<div class="info-panel show"><div class="loading"> Cargando información de la ciudad</div></div>';
     
     try {
         const searchUrl = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(region + ' Perú departamento región')}&format=json&origin=*&srlimit=1`;
@@ -120,9 +120,9 @@ async function fetchCityInfo(region) {
 
         contentArea.innerHTML = `
             <div class="info-panel show">
-                <h2>ℹ️ Información de ${region}</h2>
+                <h2> Información de ${region}</h2>
                 <p>${extract.substring(0, 1500)}${extract.length > 1500 ? '...' : ''}</p>
-                <a href="${pageUrl}" target="_blank" class="wiki-link">📖 Leer más en Wikipedia →</a>
+                <a href="${pageUrl}" target="_blank" class="wiki-link"> Leer más en Wikipedia →</a>
             </div>
         `;
     } catch (error) {
@@ -132,7 +132,7 @@ async function fetchCityInfo(region) {
 
 // Función para información de buses
 async function fetchBusInfo(region) {
-    contentArea.innerHTML = '<div class="info-panel show"><div class="loading">🚌 Cargando información de transporte</div></div>';
+    contentArea.innerHTML = '<div class="info-panel show"><div class="loading"> Cargando información de transporte</div></div>';
     
     try {
         const searchUrl = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(region + ' transporte público buses')}&format=json&origin=*&srlimit=1`;
@@ -157,20 +157,20 @@ async function fetchBusInfo(region) {
 
         contentArea.innerHTML = `
             <div class="info-panel show">
-                <h2>🚌 Sistema de Transporte en ${region}</h2>
+                <h2> Sistema de Transporte en ${region}</h2>
                 <p>${extract.substring(0, 1200)}${extract.length > 1200 ? '...' : ''}</p>
                 
                 <div class="bus-grid">
                     <div class="bus-card">
-                        <h3>🚍 Buses Urbanos</h3>
+                        <h3> Buses Urbanos</h3>
                         <p>Sistema de transporte público que conecta toda la ciudad con diversas rutas y frecuencias.</p>
                     </div>
                     <div class="bus-card">
-                        <h3>🚊 Transporte Rápido</h3>
+                        <h3>  Transporte Rápido</h3>
                         <p>Sistemas de transporte masivo como Metro, Metropolitano o trenes urbanos disponibles en la región.</p>
                     </div>
                     <div class="bus-card">
-                        <h3>🚕 Taxis y Apps</h3>
+                        <h3> Taxis y Apps</h3>
                         <p>Servicio de taxis tradicionales y aplicaciones de transporte privado disponibles.</p>
                     </div>
                     <div class="bus-card">
@@ -179,7 +179,7 @@ async function fetchBusInfo(region) {
                     </div>
                 </div>
                 
-                <a href="${pageUrl}" target="_blank" class="wiki-link">📖 Ver más información sobre transporte →</a>
+                <a href="${pageUrl}" target="_blank" class="wiki-link"> Ver más información sobre transporte →</a>
             </div>
         `;
     } catch (error) {
@@ -189,7 +189,7 @@ async function fetchBusInfo(region) {
 
 // Función para lugares turísticos
 async function fetchTouristPlaces(region) {
-    contentArea.innerHTML = '<div class="info-panel show"><div class="loading">🗺️ Cargando lugares turísticos</div></div>';
+    contentArea.innerHTML = '<div class="info-panel show"><div class="loading"> Cargando lugares turísticos</div></div>';
     
     try {
         const searchUrl = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(region + ' turismo lugares atracciones')}&format=json&origin=*&srlimit=1`;
@@ -214,9 +214,9 @@ async function fetchTouristPlaces(region) {
 
         contentArea.innerHTML = `
             <div class="info-panel show">
-                <h2>🗺️ Lugares Turísticos de ${region}</h2>
+                <h2> Lugares Turísticos de ${region}</h2>
                 <p>${extract.substring(0, 1200)}${extract.length > 1200 ? '...' : ''}</p>
-                <a href="${pageUrl}" target="_blank" class="wiki-link">📖 Descubre más lugares →</a>
+                <a href="${pageUrl}" target="_blank" class="wiki-link"> Descubre más lugares →</a>
             </div>
         `;
     } catch (error) {
@@ -226,7 +226,7 @@ async function fetchTouristPlaces(region) {
 
 // Función para gastronomía
 async function fetchGastronomia(region) {
-    contentArea.innerHTML = '<div class="info-panel show"><div class="loading">🍽️ Cargando información gastronómica</div></div>';
+    contentArea.innerHTML = '<div class="info-panel show"><div class="loading"> Cargando información gastronómica</div></div>';
     
     try {
         const searchUrl = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(region + ' gastronomía comida platos típicos')}&format=json&origin=*&srlimit=1`;
@@ -251,9 +251,9 @@ async function fetchGastronomia(region) {
 
         contentArea.innerHTML = `
             <div class="info-panel show">
-                <h2>🍽️ Gastronomía de ${region}</h2>
+                <h2> Gastronomía de ${region}</h2>
                 <p>${extract.substring(0, 1200)}${extract.length > 1200 ? '...' : ''}</p>
-                <a href="${pageUrl}" target="_blank" class="wiki-link">📖 Explorar más sobre la gastronomía →</a>
+                <a href="${pageUrl}" target="_blank" class="wiki-link"> Explorar más sobre la gastronomía →</a>
             </div>
         `;
     } catch (error) {
@@ -263,7 +263,7 @@ async function fetchGastronomia(region) {
 
 // Función para historia
 async function fetchHistoria(region) {
-    contentArea.innerHTML = '<div class="info-panel show"><div class="loading">📜 Cargando historia</div></div>';
+    contentArea.innerHTML = '<div class="info-panel show"><div class="loading"> Cargando historia</div></div>';
     
     try {
         const searchUrl = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(region + ' historia Perú')}&format=json&origin=*&srlimit=1`;
@@ -288,9 +288,9 @@ async function fetchHistoria(region) {
 
         contentArea.innerHTML = `
             <div class="info-panel show">
-                <h2>📜 Historia de ${region}</h2>
+                <h2> Historia de ${region}</h2>
                 <p>${extract.substring(0, 1500)}${extract.length > 1500 ? '...' : ''}</p>
-                <a href="${pageUrl}" target="_blank" class="wiki-link">📖 Conocer más sobre la historia →</a>
+                <a href="${pageUrl}" target="_blank" class="wiki-link"> Conocer más sobre la historia →</a>
             </div>
         `;
     } catch (error) {
@@ -302,7 +302,7 @@ function showError(message) {
     contentArea.innerHTML = `
         <div class="info-panel show">
             <div class="error-message">
-                ❌ ${message}. Por favor, intenta nuevamente.
+                 ${message}. Por favor, intenta nuevamente.
             </div>
         </div>
     `;
