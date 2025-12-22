@@ -53,21 +53,9 @@
 
     <!-- Mapa de la región -->
      <h1>Ubicación</h1>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<div id="map" style="height: 400px;"></div>
-<script>
-  const map = L.map('map').setView([40.4168, -3.7038], 13);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-  }).addTo(map);
-
-  L.marker([40.4168, -3.7038])
-    .addTo(map)
-    .bindPopup('Madrid')
-    .openPopup();
-</script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="map" style="height: 400px;"></div> 
 
     <footer>
         <p>&copy; 2025 Mi proyecto-UNSA. Todos los derechos reservados.</p>

@@ -27,6 +27,50 @@ const regionNames = {
     'ucayali': 'Ucayali'
 };
 
+// Mapa de coordenadas por región (latitud, longitud)
+const regionCoords = {
+    'Áncash': [-9.5276, -77.5260],
+    'Amazonas': [-6.2319, -77.8739],
+    'Apurímac': [-13.6361, -72.8791],
+    'Arequipa': [-16.4090, -71.5375],
+    'Ayacucho': [-13.1559, -74.2107],
+    'Cajamarca': [-7.1626, -78.5123],
+    'Callao': [-12.0561, -77.1475],
+    'Cusco': [-13.5319, -71.9675],
+    'Huancavelica': [-12.7740, -74.9710],
+    'Huánuco': [-9.9300, -76.2429],
+    'Ica': [-14.0687, -75.7297],
+    'Junín': [-12.0640, -75.2040],
+    'La Libertad': [-8.1091, -79.0215],
+    'Lambayeque': [-6.7714, -79.8401],
+    'Lima': [-12.0464, -77.0428],
+    'Loreto': [-3.7437, -73.2516],
+    'Madre de Dios': [-12.5956, -69.1896],
+    'Moquegua': [-17.1918, -70.9359],
+    'Pasco': [-10.6900, -76.2500],
+    'Piura': [-5.1945, -80.6328],
+    'Puno': [-15.8402, -70.0219],
+    'San Martín': [-6.0262, -76.9745],
+    'Tacna': [-18.0146, -70.2460],
+    'Tumbes': [-3.5669, -80.4515],
+    'Ucayali': [-8.3791, -74.5530]
+};
+
+function initializeMap(region) {
+    const coords = regionCoords[region] || regionCoords['Lima'];
+    const zoom = 12;
+    // eliminar mapa anterior si existe
+    if (window._leafletMap) {
+        window._leafletMap.remove();
+    }
+    const map = L.map('map').setView(coords, zoom);
+    window._leafletMap = map;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+    L.marker(coords).addTo(map).bindPopup(region).openPopup();
+}
+
 // Obtener la región de la URL
 function getRegionFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -312,6 +356,10 @@ function showError(message) {
 window.addEventListener('load', () => {
     fetchCityInfo(currentRegion);
     setActiveLink(btnInfoCiudad);
+    // Inicializar mapa dinámico según la región actual
+    if (typeof initializeMap === 'function') {
+        initializeMap(currentRegion);
+    }
 });
 function confirmarReserva() {
   const fecha = document.getElementById("fechaVisita").value;

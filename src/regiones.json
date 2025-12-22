@@ -3,150 +3,150 @@
     "titulo": "Amazonas",
     "descripcion": "Región selvática famosa por la fortaleza de Kuélap y cataratas impresionantes.",
     "infoCiudad": "Amazonas destaca por su biodiversidad y sitios arqueológicos como Kuélap.",
-    "imagen": "imagenes/amazonas.jpg"
+    "imagen": "https://st.depositphotos.com/1023102/57363/i/450/depositphotos_573639906-stock-photo-aerial-view-amazon-rainforest-peru.jpg"
   },
   "ancash": {
     "titulo": "Áncash",
     "descripcion": "Hogar de la Cordillera Blanca y el Parque Nacional Huascarán.",
     "infoCiudad": "Áncash es ideal para el turismo de montaña y deportes de aventura.",
-    "imagen": "imagenes/ancash.jpg"
+    "imagen": "https://st5.depositphotos.com/67660838/62561/i/450/depositphotos_625618726-stock-photo-turquoise-paron-laguna-cordillera-blanca.jpg"
   },
   "apurimac": {
     "titulo": "Apurímac",
     "descripcion": "Conocida por sus profundos cañones y tradiciones culturales.",
     "infoCiudad": "Apurímac ofrece paisajes impresionantes y cultura viva en sus pueblos.",
-    "imagen": "imagenes/apurimac.jpg"
+    "imagen": "https://st3.depositphotos.com/1012959/35496/i/450/depositphotos_354965176-stock-photo-rio-apurimac-apurimac-upper-part.jpg"
   },
   "arequipa": {
     "titulo": "Arequipa",
     "descripcion": "La Ciudad Blanca, rodeada de volcanes como el Misti y arquitectura colonial.",
     "infoCiudad": "Arequipa es una ciudad vibrante con arquitectura colonial, volcanes y una gastronomía única.",
-    "imagen": "imagenes/arequipa.jpg"
+    "imagen": "https://st.depositphotos.com/4027737/61612/i/450/depositphotos_616121014-stock-photo-drone-shot-plaza-armas-arequipa.jpg"
   },
   "ayacucho": {
     "titulo": "Ayacucho",
     "descripcion": "Capital de las iglesias coloniales y cuna de la Semana Santa peruana.",
     "infoCiudad": "Ayacucho es famosa por su Semana Santa y su arte popular.",
-    "imagen": "imagenes/ayacucho.jpg"
+    "imagen": "https://st4.depositphotos.com/17137980/24198/i/450/depositphotos_241987498-stock-photo-church-san-juan-bautista-vilcashuaman.jpg"
   },
   "cajamarca": {
     "titulo": "Cajamarca",
     "descripcion": "Escenario del encuentro entre incas y españoles, famosa por sus baños termales.",
     "infoCiudad": "Cajamarca combina historia colonial con atractivos naturales como los Baños del Inca.",
-    "imagen": "imagenes/cajamarca.jpg"
+    "imagen": "https://media.gettyimages.com/id/458926299/es/foto/plaza-de-armas-cajamarca-per%C3%BA.jpg?s=612x612&w=0&k=20&c=i1bCZ4IoiMs_f92RkjU0wUugfuUNSgcTYIwC-RiuC8A="
   },
   "callao": {
     "titulo": "Callao",
     "descripcion": "Principal puerto del Perú, con historia naval y la fortaleza del Real Felipe.",
     "infoCiudad": "Callao es clave en la historia marítima peruana y su fortaleza Real Felipe.",
-    "imagen": "imagenes/callao.jpg"
+    "imagen": "https://media.istockphoto.com/id/1096155028/es/foto/plaza-miguel-grau-callao-per%C3%BA.jpg?s=612x612&w=0&k=20&c=9_F4ra70z5ayeBCLE7DVeZh_V1KsbMIN708_CkfzOJs="
   },
   "cuzco": {
     "titulo": "Cusco",
     "descripcion": "Capital del Imperio Inca y puerta de entrada a Machu Picchu.",
     "infoCiudad": "Cusco es Patrimonio de la Humanidad y centro turístico mundial.",
-    "imagen": "imagenes/cusco.jpg"
+    "imagen": "https://media.gettyimages.com/id/114261581/es/foto/plaza-de-armas-per%C3%BA-cuzco.jpg?s=612x612&w=0&k=20&c=iUcHxghPAPquMKWqAOjTa3AptWMrPZKfYkz7UCVZJd8="
   },
   "huancavelica": {
     "titulo": "Huancavelica",
     "descripcion": "Región andina con paisajes montañosos y tradiciones ancestrales.",
     "infoCiudad": "Huancavelica conserva tradiciones andinas y paisajes de altura.",
-    "imagen": "imagenes/huancavelica.jpg"
+    "imagen": "https://as2.ftcdn.net/jpg/04/51/92/31/1000_F_451923150_SDTjDVuQ6CeZcyaUZ0HS4MIxFzswAL6U.jpg"
   },
   "huanuco": {
     "titulo": "Huánuco",
     "descripcion": "Clima cálido y sitios arqueológicos como Kotosh.",
     "infoCiudad": "Huánuco es conocida por el templo de las Manos Cruzadas de Kotosh.",
-    "imagen": "imagenes/huanuco.jpg"
+    "imagen": "https://t4.ftcdn.net/jpg/08/73/56/97/240_F_873569708_6LfyKc0WyAlL8HSCfklDtRGjGuou2WXK.jpg"
   },
   "ica": {
     "titulo": "Ica",
     "descripcion": "Famosa por sus viñedos, la Huacachina y las Líneas de Nazca cercanas.",
     "infoCiudad": "Ica ofrece oasis, playas y las misteriosas Líneas de Nazca.",
-    "imagen": "imagenes/ica.jpg"
+    "imagen": "https://st3.depositphotos.com/15756618/17908/i/450/depositphotos_179088036-stock-photo-huacachina-ica-peru.jpg"
   },
   "junin": {
     "titulo": "Junín",
     "descripcion": "Paisajes de la sierra central y la Reserva Nacional de Junín.",
     "infoCiudad": "Junín es cuna de historia y biodiversidad en la sierra central.",
-    "imagen": "imagenes/junin.jpg"
+    "imagen": "https://st2.depositphotos.com/1723045/50838/i/450/depositphotos_508386616-stock-photo-antacocha-typical-peruvian-village-in.jpg"
   },
   "lalibertad": {
     "titulo": "La Libertad",
     "descripcion": "Trujillo y las huacas del Sol y de la Luna, legado de la cultura Moche.",
     "infoCiudad": "La Libertad combina arqueología Moche y la ciudad de Trujillo.",
-    "imagen": "imagenes/lalibertad.jpg"
+    "imagen": "https://media.istockphoto.com/id/2090283157/photo/sunny-day-in-main-square-of-trujillo-peru.jpg?s=612x612&w=0&k=20&c=LU9CvCKk0fYcxLDUNG4DG8MGWYIZrog_JqsH7ERtqPc="
   },
   "lambayeque": {
     "titulo": "Lambayeque",
     "descripcion": "Museo Tumbas Reales de Sipán y tradiciones norteñas.",
     "infoCiudad": "Lambayeque es famoso por el Señor de Sipán y su museo.",
-    "imagen": "imagenes/lambayeque.jpg"
+    "imagen": "https://media.istockphoto.com/id/1392421738/es/foto/chiclayo-per%C3%BA.jpg?s=612x612&w=0&k=20&c=YK2kPz5yAqYawyA2ZEIN-9tJkMcGxn96a-FhdUS4Sf0="
   },
   "lima": {
     "titulo": "Lima",
     "descripcion": "Capital del Perú, con mezcla de modernidad y patrimonio histórico.",
     "infoCiudad": "Lima es la capital, con casco histórico y moderna vida urbana.",
-    "imagen": "imagenes/lima.jpg"
+    "imagen": "https://media.gettyimages.com/id/1304064794/es/foto/archivo.jpg?s=612x612&w=0&k=20&c=_MDxzyKfrdEuAO5gKy6zeZjqcXffTDVbqjDaGQTFbMg="
   },
   "loreto": {
     "titulo": "Loreto",
     "descripcion": "Región amazónica con Iquitos y el río Amazonas.",
     "infoCiudad": "Loreto es puerta de entrada a la Amazonía peruana.",
-    "imagen": "imagenes/loreto.jpg"
+    "imagen": "https://media.gettyimages.com/id/640977766/es/foto/gazebo-in-the-jungle.jpg?s=612x612&w=0&k=20&c=CPw9Nl4FjhKCuNtZgdtCBKmXUQxd1ptGXApXY5ORiG4="
   },
   "madrededios": {
     "titulo": "Madre de Dios",
     "descripcion": "Puerta a la biodiversidad amazónica, con reservas naturales como Tambopata.",
     "infoCiudad": "Madre de Dios es rica en biodiversidad y ecoturismo.",
-    "imagen": "imagenes/madrededios.jpg"
+    "imagen": "https://media.gettyimages.com/id/1317022485/es/foto/selva-amaz%C3%B3nica-en-el-r%C3%ADo-madre-de-dios-parque-nacional-manu-per%C3%BA.jpg?s=612x612&w=0&k=20&c=8VMCyYrzZf8YtRewZ1LIAy4W5vDre9bUmYEXGF3w4to="
   },
   "moquegua": {
     "titulo": "Moquegua",
     "descripcion": "Pequeña región con tradición vitivinícola y paisajes costeros.",
     "infoCiudad": "Moquegua es reconocida por sus vinos y paisajes costeros.",
-    "imagen": "imagenes/moquegua.jpg"
+    "imagen": "https://www.rutalibreperu.com/wp-content/uploads/2024/10/Moquegua-Principal.jpg.webp"
   },
   "pasco": {
     "titulo": "Pasco",
     "descripcion": "Región minera y hogar de la ciudad más alta del mundo: Cerro de Pasco.",
     "infoCiudad": "Pasco combina minería con paisajes de altura.",
-    "imagen": "imagenes/pasco.jpg"
+    "imagen": "https://media.gettyimages.com/id/1709816913/es/foto/huayllay-stone-forest-cerro-de-pasco-peru.jpg?s=612x612&w=0&k=20&c=risuzzGe8uyzcROGNZ-3itCnx6Zlf9sYEr_BuB2NGNQ="
   },
   "piura": {
     "titulo": "Piura",
     "descripcion": "Playas cálidas como Máncora y rica tradición artesanal.",
     "infoCiudad": "Piura es famosa por sus playas y artesanía.",
-    "imagen": "imagenes/piura.jpg"
+    "imagen": "https://media.istockphoto.com/id/1392421744/es/foto/piura-per%C3%BA.jpg?s=612x612&w=0&k=20&c=GTJ2fy3xam4mmsgf_dXRlS401nRJZt0s_FOKxLAVc34="
   },
   "puno": {
     "titulo": "Puno",
     "descripcion": "Capital del folklore peruano y hogar del Lago Titicaca.",
     "infoCiudad": "Puno celebra la Virgen de la Candelaria y el Lago Titicaca.",
-    "imagen": "imagenes/puno.jpg"
+    "imagen": "https://media.istockphoto.com/id/899464278/es/foto/lago-titicaca.jpg?s=612x612&w=0&k=20&c=CQK77hBf9lRxCARZhr1zmZTnVxz61UXjp98He6MgOrs="
   },
   "sanmartin": {
     "titulo": "San Martín",
     "descripcion": "Selva alta con cataratas y biodiversidad única.",
     "infoCiudad": "San Martín ofrece cataratas y naturaleza exuberante.",
-    "imagen": "imagenes/sanmartin.jpg"
+    "imagen": "https://content.emarket.pe/common/collections/standard/6f/26/6f263b90-edcd-4662-96b7-7dd0e47d6677.jpg"
   },
   "tacna": {
     "titulo": "Tacna",
     "descripcion": "Ciudad heroica con historia patriótica y comercio fronterizo.",
     "infoCiudad": "Tacna es símbolo de patriotismo y comercio.",
-    "imagen": "imagenes/tacna.jpg"
+    "imagen": "https://media.istockphoto.com/id/1702332102/es/foto/vista-a%C3%A9rea-del-paseo-c%C3%ADvico-de-tacna.jpg?s=612x612&w=0&k=20&c=IEBgYzTwNpKNJBbBkWf1JXbUzwnUQ6aE0tQlr_ZqNzI="
   },
   "tumbes": {
     "titulo": "Tumbes",
     "descripcion": "Playas tropicales y manglares únicos en el Perú.",
     "infoCiudad": "Tumbes es ideal para turismo de playa y naturaleza.",
-    "imagen": "imagenes/tumbes.jpg"
+    "imagen": "https://c0.wallpaperflare.com/preview/927/176/21/peru-tumbes-peruvian-street.jpg"
   },
   "ucayali": {
     "titulo": "Ucayali",
     "descripcion": "Región amazónica con Pucallpa y tradiciones indígenas.",
     "infoCiudad": "Ucayali conecta la selva con la cultura amazónica.",
-    "imagen": "imagenes/ucayali.jpg"
+    "imagen": "https://media.istockphoto.com/id/1136632579/es/foto/paseo-en-bote-durante-el-atardecer-en-la-selva-del-per%C3%BA.jpg?s=612x612&w=0&k=20&c=YLT5EiHSN7G5S1bdGkocfDuR9TzVrxLmSErZeLNUPUI="
   }
 }
