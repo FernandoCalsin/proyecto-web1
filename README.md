@@ -2,7 +2,7 @@
 Punto y coma
 
 ## Integrantes
-- Calsin Sucasaire Luis Fernando (20)
+- Calsin Sucasaire Luis Fernando (Lider) (20)
 - Condori Catasi Jonnier Angel (20)
 - Valencia Vilcas Jose Carlos (20)
 
